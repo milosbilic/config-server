@@ -1,5 +1,5 @@
 server:
-  port: 8061
+  port: 80
 
 eureka:
   instance:
@@ -15,11 +15,11 @@ spring:
   profiles: prod
   eureka:
   instance:
-    hostname: https://discovery-service-ms.herokuapp.com/
+    hostname: https://discovery-service-ms.herokuapp.com
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-       defaultZone: https://discovery-service-ms.herokuapp.com
+       defaultZone: https://discovery-service-ms.herokuapp.com/:${server.port}/eureka
 
     
