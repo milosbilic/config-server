@@ -3,7 +3,7 @@
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: https://discovery-service-ms.herokuapp.com/
   client:
     registerWithEureka: false
     fetchRegistry: false
