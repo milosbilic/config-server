@@ -4,4 +4,5 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: https://discovery-service-ms.herokuapp.com
+#      defaultZone: http://localhost:8061/eureka/
