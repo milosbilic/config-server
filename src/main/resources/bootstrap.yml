@@ -2,5 +2,5 @@
 #  port: 8088
 spring:
   profiles:
-    active: native
+    active: native,prod
   
