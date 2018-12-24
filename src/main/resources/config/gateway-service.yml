@@ -1,10 +1,10 @@
-server:
-  port: 8060
+# server:
+#   port: 8060
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: https://discovery-service-ms.herokuapp.com/eureka
 
 logging:
   pattern: 
@@ -17,21 +17,21 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: employee-service
-        uri: lb://employee-service
+      - id: country-service
+        uri: lb://country-service
         predicates:
-        - Path=/employee/**
+        - Path=/country/**
         filters:
-        - RewritePath=/employee/(?<path>.*), /$\{path}
-      - id: department-service
-        uri: lb://department-service
+        - RewritePath=/country/(?<path>.*), /$\{path}
+      - id: city-service
+        uri: lb://city-service
         predicates:
-        - Path=/department/**
+        - Path=/city/**
         filters:
-        - RewritePath=/department/(?<path>.*), /$\{path}
-      - id: organization-service
-        uri: lb://organization-service
-        predicates:
-        - Path=/organization/**
-        filters:
-        - RewritePath=/organization/(?<path>.*), /$\{path}
+        - RewritePath=/city/(?<path>.*), /$\{path}
+#       - id: organization-service
+#         uri: lb://organization-service
+#         predicates:
+#         - Path=/organization/**
+#         filters:
+#         - RewritePath=/organization/(?<path>.*), /$\{path}
