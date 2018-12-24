@@ -1,10 +1,10 @@
-server:
-  port: 8060
+# server:
+#   port: 8060
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: https://discovery-service-ms.herokuapp.com/eureka
 
 logging:
   pattern: 
@@ -13,11 +13,11 @@ logging:
 zuul:
   routes:
     department:
-      path: /department/**
-      serviceId: department-service
+      path: /country/**
+      serviceId: country-service
     employee:
-      path: /employee/**
-      serviceId: employee-service
-    organization:
-      path: /organization/**
-      serviceId: organization-service
+      path: /city/**
+      serviceId: city-service
+#     organization:
+#       path: /organization/**
+#       serviceId: organization-service
