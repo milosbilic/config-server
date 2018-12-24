@@ -12,10 +12,10 @@ logging:
               
 zuul:
   routes:
-    department:
+    country:
       path: /country/**
       serviceId: country-service
-    employee:
+    city:
       path: /city/**
       serviceId: city-service
 #     organization:
